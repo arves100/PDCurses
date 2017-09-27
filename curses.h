@@ -1819,6 +1819,41 @@ int     sb_refresh(void);
 #define PDC_KEY_MODIFIER_ALT     4
 #define PDC_KEY_MODIFIER_NUMLOCK 8
 
+/* PDCurses unicode */
+int uaddstr(const wchar_t *);
+int uaddnstr(const wchar_t *, int);
+int wuaddstr(WINDOW *win, const wchar_t *);
+int wuaddnstr(WINDOW *win, const wchar_t *, int);
+int mvuaddstr(int y, int x, const wchar_t *str);
+int mvuaddnstr(int y, int x, const wchar_t *str, int);
+int mvuwaddstr(WINDOW *win, int y, int x, const wchar_t *str);
+int mvuwaddnstr(WINDOW *win, int y, int x, const wchar_t *str, int n);
+
+int uaddwstr(const wchar_t *wstr);
+int uaddnwstr(const wchar_t *wstr, int n);
+int wuaddwstr(WINDOW *win, const wchar_t *wstr);
+int wuaddnwstr(WINDOW *win, const wchar_t *wstr, int n);
+int mvuaddwstr(int y, int x, const wchar_t *wstr);
+int mvuaddnwstr(int y, int x, const wchar_t *wstr, int n);
+int mvwuaddwstr(WINDOW *win, int y, int x, const wchar_t *wstr);
+int mvwuaddnwstr(WINDOW *win, int y, int x, const wchar_t *wstr, int n);
+
+int uprintw(const wchar_t *fmt, ...);
+int wuprintw(WINDOW *win, const wchar_t *fmt, ...);
+int mvuprintw(int y, int x, const wchar_t *fmt, ...);
+int mvwuprintw(WINDOW *win, int y, int x, const wchar_t *fmt, ...);
+int vwuprintw(WINDOW *win, const wchar_t *fmt, va_list varglist);
+int vw_uprintw(WINDOW *win, const wchar_t *fmt, va_list varglist);
+
+int wugetnstr(WINDOW *win, wchar_t *str, int n);
+
+int uscanw(const wchar_t *fmt, ...);
+int wuscanw(WINDOW *win, const wchar_t *fmt, ...);
+int mvuscanw(int y, int x, const wchar_t *fmt, ...);
+int mvwuscanw(WINDOW *win, int y, int x, const wchar_t *fmt, ...);
+int vwuscanw(WINDOW *win, const wchar_t *fmt, va_list varglist);
+int vw_uscanw(WINDOW *win, const wchar_t *fmt, va_list varglist);
+
 #if defined(__cplusplus) || defined(__cplusplus__) || defined(__CPLUSPLUS)
 # undef bool
 }
