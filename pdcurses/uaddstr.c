@@ -37,7 +37,7 @@ All functions return OK or ERR.
 
 **man-end****************************************************************/
 
-#include <cstdlib>
+#include <stdlib.h>
 #define PDC_LOGX(x) PDC_debug x
 
 int wuaddnstr(WINDOW *win, const wchar_t *str, int n)
